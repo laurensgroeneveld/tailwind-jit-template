@@ -1,6 +1,6 @@
 # Tailwind template
 
-This is a template for serving static files with Tailwind's [JIT compiler])(https://tailwindcss.com/docs/just-in-time-mode) enabled.
+This is a template for serving static files with Tailwind's [JIT compiler](https://tailwindcss.com/docs/just-in-time-mode) enabled.
 
 ## Setup
 
