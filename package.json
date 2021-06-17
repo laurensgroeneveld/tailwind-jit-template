@@ -1,14 +1,15 @@
 {
     "private": true,
     "scripts": {
-        "css:watch": "NODE_ENV=development postcss ./src/app.css -o ./public/app.css -w",
-        "css:build": "NODE_ENV=production postcss ./src/app.css -o ./public/app.css",
+        "css:watch": "cross-env NODE_ENV=development postcss ./src/app.css -o ./public/app.css -w",
+        "css:build": "cross-env NODE_ENV=production postcss ./src/app.css -o ./public/app.css",
         "serve": "servor public index.html 8080 --reload",
         "start": "npm run css:build && concurrently \"npm run css:watch\" \"npm run serve\""
     },
     "devDependencies": {
         "autoprefixer": "^10.2.6",
         "concurrently": "^6.2.0",
+        "cross-env": "^7.0.3",
         "postcss": "^8.3.4",
         "postcss-cli": "^8.3.1",
         "servor": "^4.0.2",
