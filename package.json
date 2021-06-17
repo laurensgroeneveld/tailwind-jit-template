@@ -4,7 +4,7 @@
         "css:watch": "NODE_ENV=development postcss ./src/app.css -o ./public/app.css -w",
         "css:build": "NODE_ENV=production postcss ./src/app.css -o ./public/app.css",
         "serve": "servor public index.html 8080 --reload",
-        "start": "concurrently \"npm run css:watch\" \"npm run serve\""
+        "start": "npm run css:build && concurrently \"npm run css:watch\" \"npm run serve\""
     },
     "devDependencies": {
         "autoprefixer": "^10.2.6",
