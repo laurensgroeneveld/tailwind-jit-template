@@ -1,8 +1,8 @@
 {
     "private": true,
     "scripts": {
-        "css:watch": "cross-env NODE_ENV=development postcss ./src/app.css -o ./public/app.css -w",
-        "css:build": "cross-env NODE_ENV=production postcss ./src/app.css -o ./public/app.css",
+        "css:watch": "npx tailwindcss -i ./src/app.css -o ./public/app.css --watch",
+        "css:build": "cross-env NODE_ENV=production npx tailwindcss -i ./src/app.css -o ./public/app.css --minify",
         "serve": "servor public index.html 8080 --reload",
         "start": "npm run css:build && concurrently \"npm run css:watch\" \"npm run serve\""
     },
@@ -10,9 +10,7 @@
         "autoprefixer": "^10.2.6",
         "concurrently": "^6.2.0",
         "cross-env": "^7.0.3",
-        "postcss": "^8.3.4",
-        "postcss-cli": "^8.3.1",
         "servor": "^4.0.2",
-        "tailwindcss": "^2.1.4"
+        "tailwindcss": "^2.2.0"
     }
 }
